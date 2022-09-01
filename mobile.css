@@ -1,0 +1,35 @@
+.logo{
+    margin-right: 14rem;
+}
+
+.login_dropdown{
+    left: 2.5rem;
+    /* margin-top: 0.4rem; */
+}
+
+.footer-row{
+    padding: 2rem;
+}
+
+.footer-col-1{
+    width: 40%;
+}
+.footer-col-2{
+    width: 30%;
+}
+.footer-col-3{
+    width: 30%;
+}
+.footer-col-4{
+    width: 50%;
+}
+.footer-col-5{
+    width: 50%;
+    border:none ;
+    height: auto;
+    padding-left: 2.5rem;
+}
+.footer-col-6{
+    width: 100%;
+    padding-left: 5rem;
+}

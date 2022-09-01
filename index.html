@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI as flipkart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="./mobile.css">
+</head>
+<body>
+    <!-- Header of website -->
+    <header class="head">
+        <div class="nav_container flex">
+            <!-- Logo -->
+            <div class="logo flex">
+                <a href="./index.html" class="flip_logo"><img src="./Images/Flip_logo.png" alt="logo"></a>
+                <a href="./index.html" class="style_a">Explore<span class="text-y">Plus <i class="fa fa-plus"></i></span></a>
+            </div>
+
+            <!-- making the searchbar -->
+            <div class="search_container">
+                    <form class="search flex">
+                        <input type="text" placeholder="Search For products, brands and more" class="search_box">
+                        <button class="search_btn"><i class="fa fa-search"></i></button>
+                    </form>
+            </div>
+
+            <!-- making the login button -->
+            <div class="login">
+                <a href="#" id="login_btn">Login</a>
+                <div class="login_dropdown none">
+                    <div class="pointer"></div>
+                    <ul class="login_dropdown_list">
+                        <div class="drop_box2"> <li class="login_dropdown_li sign_li flex">
+                            <p class="new_login">New customer? </p>
+                            <a href="#" class="sign_up"> Sign Up</a>
+                        </li></div>
+                        <div class="drop_box2"><li class="login_dropdown_li"><i class="icon fa fa-user"></i>My Profile</li></div>
+                        <div class="drop_box2"> <li class="login_dropdown_li"><i class="icon fa fa-plus"></i>Flipkart Plus Zne</li></div>
+                        <div class="drop_box2"> <li class="login_dropdown_li"><i class="icon fa fa-first-order"></i>Orders</li></div>
+                        <div class="drop_box2"> <li class="login_dropdown_li"><i class="icon fa fa-heart"></i>Whislist</li></div>
+                        <div class="drop_box2"> <li class="login_dropdown_li"><i class="icon fa fa-suitcase"></i>Rewards</li></div>
+                        <div class="drop_box2"><li class="login_dropdown_li"><i class="icon fa fa-gift"></i></i>Gift Cards</li></div>
+                    </ul>
+                </div>
+            </div>
+            <!-- making the more button -->
+            <div class="more" onmouseover="add(0)" onmouseout="remove(0)">
+                <span class="more_txt">More <i class="change fa fa-angle-down"></i></span>
+                <div class="more_dropdown none">
+                    <div class="pointer"></div>
+                    <ul class="more_dropdown_list">
+                        <div class="drop_box2">  <li class="more_dropdown_li"><i class="icon fa fa-bell"></i>Notification Preferences</li></div>
+                        <div class="drop_box2"><li class="more_dropdown_li"><i class="icon fa fa-shopping-basket"></i>Sell on Flipkart</li></div>
+                        <div class="drop_box2"><li class="more_dropdown_li"><i class="icon fa fa-question"></i>24X7 Customer Care</li></div>
+                        <div class="drop_box2"> <li class="more_dropdown_li"><i class="icon fa fa-line-chart"></i>Advertise</li></div>
+                        <div class="drop_box2"><li class="more_dropdown_li"><i class="icon fa fa-download"></i>Download App</li></div>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- making the cart button -->
+            <div class="cart">
+                <span class="cart_txt"><i class="fa fa-shopping-cart"></i> Cart</span>
+            </div>
+        </div>   
+    </header>
+<!-- making the  categories Dynamically-->
+    <div class="categories flex">
+        <ul class="category_list flex" id="Category">
+        </ul>
+    </div>
+
+    <!-- Slider -->
+    <div class="slides-container">
+        <div class="prev-btn" onclick="plusSlides(-1)">
+            <i class="fa fa-angle-left" ></i> 
+        </div>
+
+          <div class="slide-image">
+            <img src="./Images/slide1.jpg" alt="Slide Image"/>
+          </div>
+  
+          <div class="slide-image">
+            <img src="./Images/slide2.jpg" alt="Slide Image" />
+          </div>
+  
+          <div class="slide-image">
+            <img src="./Images/slide3.jpg" alt="Slide Image"/>
+          </div>
+  
+        <div class="next-btn" onclick="plusSlides(+1)">
+            <i class="fa fa-angle-right" ></i>
+        </div>
+    </div>
+   <!-- Product Section doing dynamically-->
+   <!-- Mobile -->
+    <div class="prod" id="product"> 
+
+    </div>
+
+
+<!-- Footer Section -->
+<footer>
+   <div class="footer-row">
+    <div class="footer-col-1">
+        <div class="footer-head">
+             <p>ABOUT</p>
+        </div>
+        <div id="about" class="footer-list">
+        </div>
+    </div>
+    <div class="footer-col-2">
+        <div class="footer-head">
+             <p>HELP</p>
+        </div>
+        <div id="help" class="footer-list">
+        </div>
+    </div>
+    <div class="footer-col-3">
+        <div class="footer-head">
+             <p>POLICY</p>
+        </div>
+        <div id="policy" class="footer-list">
+        </div>
+    </div>
+    <div class="footer-col-4">
+        <div class="footer-head">
+             <p>SOCIAL</p>
+        </div>
+        <div id="social" class="footer-list">
+        </div>
+    </div>
+
+    <div class="footer-col-5">
+        <div class="footer-head">
+             <p>Mail Us:</p>
+        </div>
+        <div class="footer-list">
+             <p class="footer-p">Flipkart Internet Private Limited,<br>
+                Buildings Alyssa, Begonia &<br>
+                Clove Embassy Tech Village,<br>
+                Outer Ring Road, Devarabeesanahalli Village,<br>
+                Bengaluru, 560103,<br>
+                Karnataka, India</p>
+        </div>
+    </div>
+
+    <div class="footer-col-6">
+        <div class="footer-head">
+             <p>Registered Office Address:</p>
+        </div>
+        <div class="footer-list">
+         <p class="footer-p">Flipkart Internet Private Limited,<br>
+         Buildings Alyssa, Begonia &<br>
+         Clove Embassy Tech Village,
+         Outer Ring Road, Devarabeesanahalli Village,<br>
+         Bengaluru, 560103,<br>
+         Karnataka, India<br>
+         CIN : U51109KA2012PTC066107<br>
+         Telephone:<span> 1800 202 9898</span></p>
+        </div>
+    </div>
+   </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="./main.js" ></script>
+</body>
+</html>
